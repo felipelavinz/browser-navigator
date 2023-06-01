@@ -1,0 +1,120 @@
+body {
+	background-color: Canvas;
+	color: CanvasText;
+	font-family: sans-serif;
+	padding: 2.5rem;
+}
+#app {
+	max-width: 65rem;
+	margin: 0 auto;
+}
+label {
+	color: GrayText;
+}
+input[type="search"] {
+	display: block;
+	width: 100%;
+	margin: .5rem 0;
+	padding: .5rem 1rem;
+	font-size: 1.5rem;
+	border-radius: .25rem;
+	border: 2px solid rgba(0, 0, 0, .125);
+}
+.search-input__container {
+	position: relative;
+}
+.search-input__container::after {
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	right: 1rem;
+	top: calc( 50% - .5rem );
+	background-size: cover;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuODA5IDIxLjY0NmwtNi4yMDUtNi4yMDVjMS4xNjctMS42MDUgMS44NTctMy41NzkgMS44NTctNS43MTEgMC01LjM2NS00LjM2NS05LjczLTkuNzMxLTkuNzMtNS4zNjUgMC05LjczIDQuMzY1LTkuNzMgOS43MyAwIDUuMzY2IDQuMzY1IDkuNzMgOS43MyA5LjczIDIuMDM0IDAgMy45MjMtLjYyNyA1LjQ4Ny0xLjY5OGw2LjIzOCA2LjIzOCAyLjM1NC0yLjM1NHptLTIwLjk1NS0xMS45MTZjMC0zLjc5MiAzLjA4NS02Ljg3NyA2Ljg3Ny02Ljg3N3M2Ljg3NyAzLjA4NSA2Ljg3NyA2Ljg3Ny0zLjA4NSA2Ljg3Ny02Ljg3NyA2Ljg3N2MtMy43OTMgMC02Ljg3Ny0zLjA4NS02Ljg3Ny02Ljg3N3oiLz48L3N2Zz4=);
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: .5;
+}
+.search-input__container:focus-within::after {
+	opacity: .75;
+}
+.results {
+	margin: 0;
+	padding: 0;
+}
+.results li {
+	list-style: none;
+}
+.result {
+	display: grid;
+	grid-template-areas: "index title enter""index url enter";
+	grid-template-columns: auto 1fr auto;
+	padding: 1rem;
+	margin: 0;
+	border-bottom: 1px solid ButtonFace;
+	border-radius: .25rem;
+	text-decoration: none;
+	color: ButtonText;
+	gap: .25em 1.5em;
+}
+.results li:last-child .result {
+	border-bottom: 0;
+}
+.result__index {
+	grid-area: index;
+	place-self: center center;
+	color: GrayText;
+}
+.result__title {
+	display: block;
+	font-weight: bold;
+	grid-area: title;
+}
+.result__url {
+	grid-area: url;
+	color: GrayText;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	font-size: .85rem;
+	line-height: 1.5;
+	height: 1.5em;
+	white-space: nowrap;
+}
+.result__icon {
+	grid-area: enter;
+	place-self: center center;
+	font-size: 1.5rem;
+	display: none;
+}
+.result__icon--bookmark {
+	display: block;
+}
+.result__icon svg {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+.result:focus {
+	background: Highlight;
+	color: HighlightText;
+	border-bottom-color: transparent;
+	outline: none;
+}
+.result:focus .result__index {
+	color: HighlightText;
+}
+.result:focus .result__icon {
+	display: block;
+}
+.result:focus .result__url {
+	color: HighlightText;
+}
+.result:hover .result__title {
+	text-decoration: underline;
+	color: Highlight;
+}
+.result:hover:focus .result__title {
+	color: HighlightText;
+}
