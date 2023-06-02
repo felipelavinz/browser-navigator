@@ -134,6 +134,10 @@ const App = () => {
             autoComplete="off"
             onChange={(event) => searchBrowser(event)}
           />
+          <div className="search-input__help">
+            Press "Enter" to search on your default search engine. ↓↑ to select
+            results, or <kbd>Ctrl+NUMBER</kbd> to access directly.
+          </div>
         </div>
       </form>
       <div>

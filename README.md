@@ -1,7 +1,11 @@
-# Step-by-step build instructions to create an exact copy of the add-on code
+# Requirements
 
-# Una guía en la que se incluyan todos los pasos técnicos necesarios.
+* node.js v16.20 or higher
+* yarn (v1) or npm to install dependencies
+* zip executable for build
 
-# Los requisitos del sistema operativo y del entorno.
+# Building
 
-# The required version and installation instructions of any programs used in the build process (such as node and npm).
+* `yarn install` to download dependencies
+* `npx encore production` to create build files (will copy files to "build/")
+* `yarn build` to create an updated zip file on "build/browser-navigator.zip"

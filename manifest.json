@@ -2,7 +2,7 @@
     "description": "A better way to navigate your browser history and bookmarks",
     "manifest_version": 2,
     "name": "Browser Navigator",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "homepage_url": "https://felipe.lavin.blog",
     "background": {
         "scripts": [
